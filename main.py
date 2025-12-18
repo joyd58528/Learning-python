@@ -1,5 +1,2 @@
-i = 1
-while i <= 5:
-    print(i)
-    i = i + 1
-print("Finished counting to 5")
+from openai import OpenAI;
+model = "gpt-4.1"
