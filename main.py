@@ -11,7 +11,7 @@ img = Image.open(path)
 response = client.models.generate_content(
     model="gemini-2.5-flash",
       contents=[
-        "Only provide the Date, Bill number and the total amount",
+        "Only provide the Bill number, Date, and the total amount provide it as an .json object. Do not include any other text. and also use camel case.",
         img
     ],
     config=genai.types.GenerateContentConfig(
@@ -20,5 +20,7 @@ response = client.models.generate_content(
         top_k=20,
     )
 )
+
+keep = ["billNumber", "date", "totalAmount"]
 
 print(response.candidates[0].content.parts[0].text)
