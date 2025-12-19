@@ -2,9 +2,13 @@ import os
 from google import genai
 from google.genai import types
 from PIL import Image
+import streamlit as st
 
-# client = genai.Client(api_key=os.environ.get('GEMINI_API_KEY'))
-client = genai.Client(api_key="GEMINI_API_KEY")
+st.set_page_config(page_title="Bill Generator", page_icon="🧾")
+st.title("Bill Generator test build")
+st.write("Upload an image")
+
+client = genai.Client(api_key=os.environ.get('GEMINI_API_KEY'))
 path = input("Enter image path: ")
 img = Image.open(path)
 
