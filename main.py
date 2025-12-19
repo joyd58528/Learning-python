@@ -7,10 +7,14 @@ import streamlit as st
 st.set_page_config(page_title="Bill Generator", page_icon="🧾")
 st.title("Bill Generator test build")
 st.write("Upload an image")
-
 client = genai.Client(api_key=os.environ.get('GEMINI_API_KEY'))
 path = input("Enter image path: ")
 img = Image.open(path)
+
+uploaded_file = st.file_uploader(
+    "Upload bill image",
+    type=["jpg","webp", "jpeg", "png"]
+)
 
 response = client.models.generate_content(
     model="gemini-2.5-flash",
