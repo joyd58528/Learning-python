@@ -4,7 +4,7 @@ from google.genai import types
 from PIL import Image
 
 # client = genai.Client(api_key=os.environ.get('GEMINI_API_KEY'))
-client = genai.Client(api_key="AIzaSyA5BQwl-AsPmLrbxmBdugZNdMt4Ctu9E0o")
+client = genai.Client(api_key="GEMINI_API_KEY")
 path = input("Enter image path: ")
 img = Image.open(path)
 
