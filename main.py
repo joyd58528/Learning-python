@@ -11,12 +11,6 @@ if "image_bytes" not in st.session_state:
 if "result" not in st.session_state:
     st.session_state["result"] = None
 
-if "raw" not in st.session_state:
-    st.session_state["raw"] = None
-
-if "processing" not in st.session_state:
-    st.session_state["processing"] = False
-
 st.set_page_config(page_title="Bill Generator", page_icon="🧾", layout="wide")
 st.title("Bill Generator test build")
 st.write("Upload an image")
@@ -35,7 +29,7 @@ with input_col:
         st.session_state.image_bytes = uploaded_file.getvalue()
 
     if st.session_state.image_bytes:
-        st.image(st.session_state.image_bytes, use_column_width=True)
+        st.image(st.session_state.image_bytes, use_container_width=True)
 
 #output 
 with output_col:
@@ -53,6 +47,7 @@ with output_col:
                 top_k=20,
             )
         )
+        st.session_state.result = response.text
         def clean_json(text: str) -> str:
             text = text.strip()
             if text.startswith("```json"):
@@ -60,3 +55,8 @@ with output_col:
             if text.lower().startswith("json:"):
                 text = text[4:].strip()
             return text
+
+        file=json.loads(clean_json(st.session_state.result))
+        st.text(f"Bill Number: {file.get('billNumber', 'N/A')}") 
+        st.text(f"Date: {file.get('date', 'N/A')}") 
+        st.text(f"Total Amount: {file.get('totalAmount', 'N/A')}")
