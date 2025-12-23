@@ -142,7 +142,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Your Name - [JoyD58528](https://youtube.com/@Kleo-ul5ri)
 
-Project Link: [https://github.com/yourusername/ai-bill-reading-system](https://github.com/yourusername/ai-bill-reading-system)
+Project Link: [https://github.com/joyd58528/Learning-python](https://github.com/joyd58528/Learning-python)
 
 ## 🙏 Acknowledgments
 
