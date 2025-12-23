@@ -37,7 +37,7 @@ with output_col:
         response = client.models.generate_content(
             model="gemini-2.5-flash",
             contents=[
-                types.Part.from_text(text="Only provide the Bill number, Date, and the total amount provide it as an .json object. Do not include any other text. and also use camel case."),
+                types.Part.from_text(text="Only provide the Bill number, Date, Shop name, quantity and the total amount provide it as an .json object. Do not include any other text. and also use camel case."),
                 types.Part.from_bytes(data=st.session_state.image_bytes, mime_type="image/jpeg")
 
             ],
@@ -57,6 +57,21 @@ with output_col:
             return text
 
         file=json.loads(clean_json(st.session_state.result))
-        st.text(f"Bill Number: {file.get('billNumber', 'N/A')}") 
-        st.text(f"Date: {file.get('date', 'N/A')}") 
-        st.text(f"Total Amount: {file.get('totalAmount', 'N/A')}")
+        st.header("")
+
+        st.header("")
+
+        st.header("")
+
+        st.header("")
+
+        st.header(f"Bill Number:  {file.get('billNumber', 'N/A')}")
+
+        st.header(f"Date:         {file.get('date', 'N/A')}")
+
+        st.header(f"Total Amount: {file.get('totalAmount', 'N/A')}")
+
+        st.header(f"Shop Name:    {file.get('shopName', 'N/A')}")
+
+        st.header(f"Quantity:     {file.get('quantity', 'N/A')}")
+
