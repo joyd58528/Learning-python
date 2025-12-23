@@ -36,7 +36,7 @@ with output_col:
         response = client.models.generate_content(
             model="gemini-2.5-flash",
             contents=[
-                types.Part.from_text(text="Only provide the Bill number, Date, Shop name, quantity and the total amount provide it as an .json object. Do not include any other text. and also use camel case."),
+                types.Part.from_text(text="Only provide the Bill number, Date (sometimes it is provide in the format DD/MM/YYYY current year is 2025.), Shop name (also sometimes there could be the company name as well always ignore it), quantity and the total amount provide it as an .json object. Do not include any other text. and also use camel case."),
                 types.Part.from_bytes(data=st.session_state.image_bytes, mime_type="image/jpeg")
 
             ],
