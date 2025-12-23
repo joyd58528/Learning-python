@@ -148,8 +148,6 @@ Project Link: [https://github.com/joyd58528/Learning-python](https://github.com/
 
 - [Streamlit](https://streamlit.io/) - Web framework
 - [Google Gemini](https://deepmind.google/technologies/gemini/) - AI model
-- [Pillow](https://python-pillow.org/) - Image processing
-
 ## 📞 Support
 
 If you have any questions or run into issues, please open an issue on GitHub.
