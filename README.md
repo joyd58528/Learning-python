@@ -140,7 +140,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👨‍💻 Author
 
-Your Name - [JoyD58528](https://youtube.com)
+Your Name - [JoyD58528](https://youtube.com/@Kleo-ul5ri)
 
 Project Link: [https://github.com/yourusername/ai-bill-reading-system](https://github.com/yourusername/ai-bill-reading-system)
 
