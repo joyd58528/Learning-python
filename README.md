@@ -140,7 +140,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👨‍💻 Author
 
-Your Name - [JoyD58528](https://youtube.com/@Kleo-ul5ri)
+Your Name - [JoyD58528]()
 
 Project Link: [https://github.com/joyd58528/Learning-python](https://github.com/joyd58528/Learning-python)
 
